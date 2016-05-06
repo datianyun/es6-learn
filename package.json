@@ -1,25 +1,24 @@
 {
-  "name": "ES6-build-tools",
-  "version": "1.0.0",
-  "description": "A comprehensive walkthrough setting up an ES6 environment with exercises to practice building your own",
-  "main": "client/app.js",
-  "dependencies": {
-    "babel-polyfill": "^6.8.0",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.0.20",
-    "babel-preset-es2015": "^6.0.15",
-    "babel-preset-stage-0": "^6.0.15",
-    "browser-sync": "^2.7.12",
-    "gulp": "^3.9.0",
-    "gulp-webpack": "^1.5.0",
-    "run-sequence": "^1.1.1",
-    "webpack": "^1.9.12"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Dan Thareja <danthareja@gmail.com>",
-  "license": "MIT"
+    "name": "es6-learn",
+    "version": "1.0.0",
+    "description": "利用babel gulp webpack创建一个es6学习环境",
+    "main": "client/app.js",
+    "dependencies": {
+        "babel-polyfill": "^6.8.0",
+        "webpack-dev-server": "^1.14.1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.0.20",
+        "babel-preset-es2015": "^6.0.15",
+        "babel-preset-stage-0": "^6.0.15",
+        "browser-sync": "^2.7.12",
+        "gulp": "^3.9.0",
+        "gulp-webpack": "^1.5.0",
+        "run-sequence": "^1.1.1",
+        "webpack": "^1.9.12"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "datianyun"
 }

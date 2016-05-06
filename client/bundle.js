@@ -8509,6 +8509,8 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var _marked = [helloWorldGenerator].map(regeneratorRuntime.mark);
+	/*generator*/
+
 
 	// We can use any ES6 syntax supported by Babel here now!
 	function helloWorldGenerator() {
@@ -8517,7 +8519,7 @@
 	      switch (_context.prev = _context.next) {
 	        case 0:
 	          _context.next = 2;
-	          return 'hello12';
+	          return 'hello121';
 
 	        case 2:
 	          _context.next = 4;
@@ -8537,6 +8539,29 @@
 	var hw = helloWorldGenerator();
 	console.log(hw.next());
 	console.log(hw.next());
+
+	/*Promise*/
+	function timeout(ms) {
+	  return new Promise(function (resolve, reject) {
+	    setTimeout(resolve, ms, 'done');
+	  });
+	}
+
+	timeout(100).then(function (value) {
+	  console.log(value);
+	});
+	var promise = new Promise(function (resolve, reject) {
+	  console.log('Promise');
+	  resolve();
+	});
+
+	promise.then(function () {
+	  console.log('Resolved.');
+	});
+
+	console.log('Hi!');
+
+	/*异步操作和Async函数*/
 
 /***/ },
 /* 300 */
