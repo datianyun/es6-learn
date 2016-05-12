@@ -8508,32 +8508,79 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var _marked = [helloWorldGenerator].map(regeneratorRuntime.mark);
-	/*generator*/
+	var _marked = [loadUI, helloWorldGenerator].map(regeneratorRuntime.mark);
 
-
-	// We can use any ES6 syntax supported by Babel here now!
-	function helloWorldGenerator() {
-	  return regeneratorRuntime.wrap(function helloWorldGenerator$(_context) {
+	function loadUI() {
+	  return regeneratorRuntime.wrap(function loadUI$(_context) {
 	    while (1) {
 	      switch (_context.prev = _context.next) {
 	        case 0:
-	          _context.next = 2;
-	          return 'hello121';
+	          console.log(1);
+	          _context.next = 3;
+	          return console.log(2);
 
-	        case 2:
-	          _context.next = 4;
-	          return 'world';
+	        case 3:
+	          console.log(3);
 
 	        case 4:
-	          return _context.abrupt('return', 'ending');
-
-	        case 5:
 	        case 'end':
 	          return _context.stop();
 	      }
 	    }
 	  }, _marked[0], this);
+	}
+	var loader = loadUI();
+	// 加载UI
+	loader.next();
+
+	// 卸载UI
+	loader.next();
+
+	var handler = {
+	  get: function get(target, name) {
+	    if (name === 'prototype') return Object.prototype;
+	    return 'Hello, ' + name;
+	  },
+	  apply: function apply(target, thisBinding, args) {
+	    return args[0];
+	  },
+	  construct: function construct(target, args) {
+	    return args[1];
+	  }
+	};
+
+	var fproxy = new Proxy(function (x, y) {
+	  return x + y;
+	}, handler);
+
+	var a = fproxy(1, 2); // 1
+	var a = new fproxy(1, 2); // 2
+	fproxy.prototype; // Object.prototype
+	fproxy.foo; // 'Hello, foo'
+	/*generator*/
+
+	// We can use any ES6 syntax supported by Babel here now!
+	function helloWorldGenerator() {
+	  return regeneratorRuntime.wrap(function helloWorldGenerator$(_context2) {
+	    while (1) {
+	      switch (_context2.prev = _context2.next) {
+	        case 0:
+	          _context2.next = 2;
+	          return 'hello121';
+
+	        case 2:
+	          _context2.next = 4;
+	          return 'world';
+
+	        case 4:
+	          return _context2.abrupt('return', 'ending');
+
+	        case 5:
+	        case 'end':
+	          return _context2.stop();
+	      }
+	    }
+	  }, _marked[1], this);
 	}
 
 	var hw = helloWorldGenerator();
